@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/img/learnhub.png" type="image/x-icon">
+        <title>SkillStack</title>
+        <link rel="shortcut icon" href="/assets/img/learnhub.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/index.css"> 
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- FontAwesome 6.2.0 CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <!-- (Optional) Use CSS or JS implementation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+            integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    
+    <body class="w-100 h-[100vh]">
+
+        <div id="preloader">
+        </div>
+
+        <section class="w-100 h-[100vh] bg-gray-100">
+            <header class="bg-[#88d4c4] min-h-[10vh] body-font">
+                <div class="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
+                    <span class="flex items-center gap-3">
+                        <a href="/main" class="inline-flex items-center bg-gray-900 border-0 py-1 px-2 md:py-2 md:px-3 font-bold text-white focus:outline-none hover:bg-gray-800 rounded text-base mt-0">Login
+                        </a>
+                        <a href="/main" class="inline-flex items-center bg-transparent border-2  text-gray-900 border-gray-900 py-1 px-2 md:py-2 md:px-3 font-bold focus:outline-none hover:text-white hover:bg-gray-900 transition-all rounded text-base mt-0">Sign Up 
+                        </a>
+                    </span>
+                    <a href="/" class="flex title-font font-medium items-center text-gray-900 mb-0">
+                        <img src="/img/learnhub2.png" style="width: 130px; height: 60px;" alt="logo">
+                        <!-- <span class="ml-2 mt-1 text-xl font-bold">SkillStack</span> -->
+                    </a>
+                </div>
+            </header>
+
+            <section class="text-gray-900 h-[80vh] flex items-center body-font">
+                <div class="w-[90%] mx-auto flex px-5 md:flex-row flex-col-reverse items-center">
+                    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:mb-0 items-center justify-center text-center">
+                        <img src="/img/book.svg" class="mb-3" style="width: 300px; height: 300px;" alt="logo">
+                        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold text-gray-900">Feel the magic of Learning here....</h1>
+                        <p class="mb-4 text-gray-500 text-xl lead h-10"></p>
+                        <div class="flex justify-center">
+                            <a href="/main" class="inline-flex bg-[#88d4c4] text-black border-gray-900 py-2 px-6 focus:outline-none md:transition-transform md:hover:scale-110 rounded text-lg">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 mb-12 hidden md:block lg:block md:mb-0 w-5/6">
+                        <img class="object-cover object-center rounded" alt="hero" src="img/main.png">
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var loader = document.getElementById("preloader");
+            addEventListener('load', () => {
+                loader.style.display = 'none';
+            });
+        </script>
+
+<script>
+    !function(w, d, s, ...args){
+      var div = d.createElement('div');
+      div.id = 'aichatbot';
+      d.body.appendChild(div);
+      w.chatbotConfig = args;
+      var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s);
+      j.defer = true;
+      j.type = 'module';
+      j.src = 'https://aichatbot.sendbird.com/index.js';
+      f.parentNode.insertBefore(j, f);
+    }(window, document, 'script', 'FB7DE97C-7FEE-42E0-87D1-FB5FA63E80FE', 'onboarding_bot', {
+      apiHost: 'https://api-cf-ap-8.sendbird.com',
+    });
+    </script>
+
+        <!--<script>
+            var typed3 = new Typed('.lead', {
+                strings: ['Developing Developers', 'Opportunity for Tomorrow', 'Discipline, Character and Education','Developing Developers'],
+                typeSpeed: 80,
+                backSpeed: 80,
+                cursorChar: "",
+                smartBackspace: true, 
+                loop: true
+            });
+        </script> -->
+        <script src="/index.js"></script>
+    </body>
+</html>

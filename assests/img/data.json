@@ -1,0 +1,40 @@
+[
+	{
+		"name":"Web Development",
+		"additional":["html","css","javascript","js","Frontend"],
+		"description":"web development is the most in-demand software job in the market. You'll learn HTML , CSS and JAVASCRIPT",
+		"img":"https://ictlab.kz/wp-content/uploads/2020/06/2712780_1.jpg"
+	}
+	,
+	{
+		"name":"Java Fundamentals",
+		"additional":["java","Backend"],
+		"description":"JAVA is a popular programming language and offers a high salary. You'll learn about basics of JAVA",
+		"img":"https://www.developer.com/wp-content/uploads/2021/09/Java-tutorials.jpg"
+	}
+	,
+	{
+		"name":"C Programming",
+		"additional":["C","Backend"],
+		"description":" This course provides a thorough introduction to the C programming language, the workhorse of the UNIX operating system ",
+		"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTH90RvQ11imwrTNF_9BS3AIirBZvDwV0GyA&usqp=CAU"
+	},
+	{
+		"name":"C++ Programming",
+		"additional":["C++","Backend"],
+		"description":"An understanding of C++ helps to solidify knowledge of programming concepts and provides a strong foundation for learning other programming languages.",
+		"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_V7KaWjxvWYcyE1QKL9I0ciGCvCLsXy6JmrMSSSmr-7-FfNJSQeRv551gCqABBUvP44&usqp=CAU"
+	},
+	{
+		"name":"Python Programing",
+		"additional":["python","backend"],
+		"description":"Introduction to Python programming is a beginner level course, which teaches you the fundamentals of the Python programming language",
+		"img":"https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png"
+	},
+	{
+		"name":"DataBase Management System",
+		"additional":["dbms","backend","sql","database"],
+		"description":"This SQL tutorial will give you a full understanding of SQL. You will learn and apply them to real-world scenarios.",
+		"img":"https://i0.wp.com/www.drware.com/wp-content/uploads/2020/10/Access.png?fit=809%2C790&ssl=1"
+	}
+]

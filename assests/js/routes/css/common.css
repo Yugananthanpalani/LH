@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap');
+*{
+	font-family: 'Lexend', sans-serif !important;
+}
+.driver-popover.driverjs-theme {
+	background-color: #fde047;
+	color: #000;
+  }
+
+  

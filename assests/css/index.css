@@ -1,0 +1,15 @@
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ *{
+                font-family: 'Josefin Sans', sans-serif;
+  }
+            
+            #preloader{
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	background: #101010 url("https://i.pinimg.com/originals/05/cb/41/05cb41dd40c1045ef47ee2be34147c79.gif") no-repeat center center;
+	background-size: 20%;
+           }
+
+       

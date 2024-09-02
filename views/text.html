@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+  <script src="https://unpkg.com/googleapis@59.0.0/googleapis.js"></script>
+  
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  
+
+	<style>
+		#chatbot {
+  width: 500px;
+  height: 500px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #ccc;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+}
+
+#chatbot-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+#chatbot-body {
+  padding: 20px;
+}
+
+#chatbot-conversation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#chatbot-conversation li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#chatbot-form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#chatbot-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#chatbot-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+:root{
+  --bg-primary: #212121;
+}
+	</style>
+</head>
+<body>
+
+<div class="bg-primary" style="width: 200px;height: 200px; ">
+
+</div>
+
+	<div id="chatbot">
+		<div id="chatbot-header">Chatbot</div>
+		<div id="chatbot-body">
+		  <ul id="chatbot-conversation">
+			<!-- Conversations will be appended here -->
+		  </ul>
+		  <form id="chatbot-form">
+			<input type="text" id="chatbot-input" placeholder="Type a message..." />
+			<button type="submit">Send</button>
+		  </form>
+		</div>
+	  </div>
+	  <script src="../index.js">
+	  </script>
+<script>
+	const chatbotForm = document.getElementById("chatbot-form");
+const chatbotInput = document.getElementById("chatbot-input");
+const chatbotConversation = document.getElementById("chatbot-conversation");
+
+chatbotForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const userMessage = chatbotInput.value;
+  chatbotConversation.innerHTML += `
+    <li>
+      <b>You:</b> ${userMessage}
+    </li>
+  `;
+  chatbotInput.value = "";
+
+  // Dialogflow API
+  const dialogflowApiUrl = "https://api.dialogflow.com/v1/query?v=20210101";
+
+  const request = new XMLHttpRequest();
+  request.open("POST", dialogflowApiUrl);
+  request.setRequestHeader("Authorization", "Bearer <DIALOGFLOW_API_KEY>");
+  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+  request.onload = function() {
+    const response = JSON.parse(request.responseText);
+    const botMessage = response.result.fulfillment.speech;
+    chatbotConversation.innerHTML += `
+      <li>
+        <b>Bot:</b> ${botMessage}
+      </li>
+    `;
+    chatbotConversation.scrollTop = chatbotConversation.scrollHeight;
+  };
+
+  const requestData = JSON.stringify({
+    query: userMessage,
+    lang: "en",
+    sessionId: "1234567890"
+  });
+
+  request.send(requestData);
+});
+
+</script>
+
+
+<!-- giosg tag -->
+<script>
+	(function(w, t, f) {
+	  var s='script',o='_giosg',h='https://service.giosg.com',e,n;e=t.createElement(s);e.async=1;e.src=h+'/live2/'+f;
+	  w[o]=w[o]||function(){(w[o]._e=w[o]._e||[]).push(arguments)};w[o]._c=f;w[o]._h=h;n=t.getElementsByTagName(s)[0];n.parentNode.insertBefore(e,n);
+	})(window,document,"b9bf755e-a640-11ed-9e5c-0242ac120005");
+	</script>
+	<!-- giosg tag -->
+	
+
+<!-- <script src="https://www.socialintents.com/api/socialintents.1.3.js#2c9fa6c38623c9b40186279f396702ab" async="async"></script> -->
+</body>
+</html>

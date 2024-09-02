@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Python Course</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="shortcut icon" href="../img/learnhub.png" type="image/x-icon">
+	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="6109bbda-8cef-4419-9127-4755b93036c4";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+	<style>
+		#second-element-introduction {
+	  overflow-y: scroll;
+	  scrollbar-width: thin;
+	  scrollbar-color: #c0c0c0 #f0f0f0;
+	}
+	#second-element-introduction iframe{
+		width: 100%;
+		height: 600px !important;
+	}
+	
+	#second-element-introduction::-webkit-scrollbar {
+	  width: 5px;
+	  border-radius: 20px;
+	}
+	
+	#second-element-introduction::-webkit-scrollbar-track {
+	  background-color: #fff;
+	}
+	
+	#second-element-introduction::-webkit-scrollbar-thumb {
+	  background-color: #c0c0c0;
+	  border-radius: 20px;
+	}
+		</style>
+	
+
+</head>
+<body class="w-100 flex h-auto md:h-[100vh] bg-[#63C29C]">	
+	<div id="fourth-element-introduction" class="w-100 hidden border-e-2 capitalize md:flex-col md:items-center  md:flex bg-white md:w-[5%] h-100 ">
+		<a href="/main" title="Home" class="w-[100%] h-[100px] text-2xl fas fa-house bg-zinc-900 flex items-center justify-center text-white"></a>
+        <a href="/web-development" title="Web Development" class="w-[100%] fab fa-html5 text-xl border-b-2 h-[90px] flex items-center justify-center bg-[#48cae4] text-black"></a>
+		<a href="/java" title="Java" class="w-[100%] text-xl border-b-2 fab fa-java h-[90px] flex items-center justify-center bg-[#48cae4] text-black"></a>
+		<a href="/c" title="C Programing" class="w-[100%] text-xl border-b-2 fas fa-copyright h-[90px] flex items-center justify-center bg-[#48cae4] text-black"></a>
+		<a href="/cplusplus" title="C++ Programing" class="w-[100%] text-xl border-b-2  h-[90px] flex items-center justify-center bg-[#48cae4] text-black"><box-icon type='logo' name='c-plus-plus'></box-icon></a>
+		<a href="/dbms" title="DataBase Management System" class="w-[100%] text-xl border-b-2 fas fa-database h-[90px] flex items-center justify-center bg-[#48cae4] text-black"> </a>
+	</div>
+
+<div class="w-[100%] flex flex-col bg-blue-200 md:w-[50%] md:h-[100%] h-[100vh]">
+	<span class=" w-100 h-[10%] flex items-center justify-start p-3 md:hidden bg-[#63c29c]">
+		<div class="w-full h-screen flex items-center justify-between">
+			
+			<span class="flex justify-center items-center">
+				<img class="w-[50px] h-[50px]" src="../img/learnhub.png" alt="">
+				<h1 class="text-xl">Learn Hub</h1>
+			</span>
+			<i onclick="toggleSlideover()" class="fas fa-2x fa-bars-staggered"></i>
+		
+		<div id="slideover-container" class="w-full h-full fixed inset-0 invisible">
+		  <div onclick="toggleSlideover()" id="slideover-bg" class="w-full h-full duration-500 ease-out transition-all inset-0 absolute bg-gray-900 opacity-0"></div>
+		  <div  id="slideover" class="w-96 bg-gray-900 h-full absolute right-0 duration-300 flex items-start ps-5 justify-evenly flex-col ease-out transition-all translate-x-full">
+			
+			<a href="/web-development" class="w-[50%] min-w-max active:bg-orange-600  text-2xl  fontbold border-b-2 h-[70px] flex items-center justify-center rounded-xl bg-[#63c29c] text-black">WebDev</a>
+			<a href="/java" class="w-[50%] min-w-max active:bg-orange-600  text-2xl  fontbold border-b-2  h-[70px] flex items-center justify-center rounded-xl bg-[#63c29c] text-black">Java</a>
+			<a href="/c" class="w-[50%] min-w-max active:bg-orange-600  text-2xl  fontbold border-b-2  h-[70px] flex items-center justify-center rounded-xl bg-[#63c29c] text-black">C progaming</a>
+			<a href="/cplusplus" class="w-[50%] min-w-max active:bg-orange-600  text-2xl  fontbold border-b-2  h-[70px] flex items-center justify-center rounded-xl  bg-[#63c29c] text-black px-2">C++ </a>
+			<a href="/dbms" class="w-[50%] min-w-max active:bg-orange-600  text-2xl  fontbold border-b-2  h-[70px] flex items-center justify-center rounded-xl bg-[#63c29c] text-black">Dbms </a>
+			<a href="/main" class="w-[50%] min-w-max p-2 h-[50px] bg-red-600 rounded-xl flex items-center justify-center text-2xl  text-white"><i class="fas fa-arrow-left me-2"></i> Return Home</a>
+		  </div>
+		</div>
+	  </div>
+	</span>
+	<span id="first-element-introduction" class="w-100 h-[40%] md:h-[50%] flex items-center justify-center bg-slate-900">
+		<iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/rfscVS0vtbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</span>
+	<span id="second-element-introduction" class="w-100  h-[50%] md:h-[50%] border-t-2 bg-fuchsia-500"> 
+		<iframe src="https://interfaces.zapier.com/embed/page/clm82fbnw473250ol9ocu5ap97?" style='max-width: 100%; width: 100%; height: 100%;'></iframe>
+	</span>
+</div>	
+<div id="third-element-introduction" class="w-100 border-s-2 md:items-center md:justify-center bg-slate-900 hidden md:flex md:w-[45%] h-100">
+	<iframe src="https://trinket.io/embed/python/e649016a5e" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+<script>
+if (window.screen.width > 780 ) {
+	if(sessionStorage.getItem("tour")){
+        console.log("Tour Skipped by Local Storage")
+	}
+	else{
+	sessionStorage.setItem("tour",true);
+		const driver = window.driver.js.driver;
+
+	const driverObj = driver({
+		
+  nextBtnText: 'Next',
+  prevBtnText: 'Back',
+  showProgress: true,
+  showButtons: ['next', 'previous'],
+  steps: [
+    { element: '#first-element-introduction', popover: { title: 'Video', description: 'Entire Course Video with Fullscreen' } },
+    { element: '#second-element-introduction', popover: { title: 'Jarvis Ai', description: 'Ai Based ChatBot for Learning' } },
+    { element: '#third-element-introduction', popover: { title: 'Online Compiler', description: 'Powerful online compiler for hands on practices' } },
+    { element: '#fourth-element-introduction', popover: { title: 'Courses', description: 'Quick Access of List of Courses We Offered' } },
+	{ popover: { title: 'Happy Coding', description: 'And that is all, go ahead and start coding!' } }
+  ]
+});
+driverObj.drive();
+	}
+	
+	}
+</script>
+
+<script>
+	function toggleSlideover(){
+    document.getElementById('slideover-container').classList.toggle('invisible');
+    document.getElementById('slideover-bg').classList.toggle('opacity-0');
+    document.getElementById('slideover-bg').classList.toggle('opacity-50');
+    document.getElementById('slideover').classList.toggle('translate-x-[30%]');
+}
+</script>
+
+</body>
+</html>
